@@ -1,3 +1,41 @@
 page-home {
+  ion-scroll[scrollX] {
+    white-space: nowrap;
+    height: 120px;
+    overflow: hidden;
 
+    .scroll-item {
+      display: inline-block;
+    }
+
+    .selectable-icon{
+      margin: 10px 20px 10px 20px;
+      color: red;
+      font-size: 100px;
+    }
+
+    ion-avatar img{
+      margin: 10px;
+    }
+  }
+
+  ion-scroll[scroll-avatar]{
+    height: 60px;
+  }
+
+  /* Hide ion-content scrollbar */
+  ::-webkit-scrollbar{
+    display:none;
+  }
+  .dahlaq-c7e0f{
+    margin: auto transparent;
+    background: url('../assets/icon/dahlaq.png') repeat transparent;
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    border-color: black;
+    outline:0;
+    
+
+  }
 }

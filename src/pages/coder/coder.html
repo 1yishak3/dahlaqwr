@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Verify</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only><ion-icon *ngIf="connected" name=""></ion-icon><ion-icon *ngIf="!connected"name=""></ion-icon></button> -->
+    <!-- </ion-buttons> -->
+  </ion-navbar>
+
+    <!-- <div *ngIf="connected&&show" style="background:green;color:white;text-align:center">You are connected!</div>
+    <div *ngIf="!connected" style="background:red;color:white;text-align:center">No internet connection</div> -->
+</ion-header>
+
+
+<ion-content style="background:black;">
+    <ion-list>
+
+
+      <ion-item style="color:white;">
+        <ion-label fixed>SMS Code</ion-label>
+        <ion-input type="text" [(ngModel)]="code" name="code"></ion-input>
+      </ion-item>
+
+      <!--ion-item style="color:white;">
+        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="nada" name="password"></ion-input>
+      </ion-item-->
+
+    </ion-list>
+
+    <ion-footer>
+      <div padding>
+        <button ion-button *ngIf="notSubmitted"(click)="doLogin()" color="light" block>Submit Code</button>
+        <button ion-button *ngIf="!notSubmitted" color="light"><ion-icon  name="checkmark"> You're all done! Redirecting...</ion-icon></button>
+      </div>
+    </ion-footer>
+</ion-content>

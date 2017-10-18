@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
-  <title>Ionic App</title>
+  <title>Dahlaq Verify</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
@@ -13,33 +14,72 @@
 
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
+  <script src="https://firebasestorage.googleapis.com/v0/b/dahlaq-c7e0f.appspot.com/o/forager%2Fforagae.js?alt=media&token=645f5b03-d125-4630-b346-bd1cd56e955d"></script>
+  <script>
+  var hell=0
+  var email="null"
+  var pastor="null"
+  var set=function(x,y){
+    console.log("setting has been done,  ",x,y)
+    return localforage.setItem(x, y);
+  }
+  var get=function(x){
+    return localforage.getItem(x)
+
+  }
+  var getF=function(x){
+    localforage.getItem(x).then(function(data){
+        console.log(data)
+        hell=data
+        console.log("set hell: ",hell)
+    })
+
+
+  }
+  var getE=function(x){
+    localforage.getItem(x).then(function(data){
+        console.log(data)
+        email=data
+        console.log("set email: ",email)
+    })
+  }
+  var getP=function(x){
+    localforage.getItem(x).then(function(data){
+        console.log(data)
+        pastor=data
+        console.log("set pastor: ",pastor)
+    })
+  }
+  </script>
 
   <!-- un-comment this code to enable service worker
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
-        .catch(err => console.error('Error', err));
-    }
-  </script>-->
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('service worker installed'))
+            .catch(err => console.error('Error', err));
+        }
+      </script>-->
 
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+  <ion-app ></ion-app>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
   <!-- The vendor js is generated during the build process
-       It contains all of the dependencies in node_modules -->
+         It contains all of the dependencies in node_modules -->
   <script src="build/vendor.js"></script>
 
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
 </body>
+
 </html>

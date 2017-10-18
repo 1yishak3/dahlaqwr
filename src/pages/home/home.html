@@ -1,18 +1,33 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content style="background:black;color:white" scroll="false">
+  <!--div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div style="color:white;" class="splash-intro">
+      {{ 'WELCOME_INTRO' | translate }}
+    </div>
+  </div-->
+  <div text-center padding>
+    <img class="dahlaq-c7e0f"/>
+  </div>
+  <div text-center style="text-align:center"padding>
+    <ion-note text-center style="color:white">We're just trying to make sure Dahlaq is safe for all its users. Tap on the button below and you're good!</ion-note>
+  </div>
 </ion-content>
+<ion-footer style="background:black;color:white">
+
+  <div padding>
+
+    <!-- <ion-list>
+      <ion-item style="color:white">
+        <ion-label fixed>+251</ion-label>
+        <ion-input type="tel" [(ngModel)]="creds.digits" name="phone" placeholder="Your Phone Number"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button color="secondary" block id="signup-button" (click)="signup()" class="signup">{{ 'SIGNUP' | translate }}</button>
+    <button ion-button color="light" block id="login-button" (click)="login()" class="login">{{ 'LOGIN' | translate }}</button> -->
+
+    <button ion-button color="light" block id="verify" (click)="clicker()">Tap to Verify</button>
+  </div>
+</ion-footer>
